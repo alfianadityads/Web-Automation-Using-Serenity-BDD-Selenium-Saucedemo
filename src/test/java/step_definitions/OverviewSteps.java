@@ -4,6 +4,7 @@ import org.example.pageObject.OverviewPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -21,5 +22,11 @@ public class OverviewSteps {
     @When("User verifies that Sauce Labs Onesie as a product in the checkout list")
     public void verifySelectedProduct() {
         Assert.assertTrue(overviewPage.verifyCheckoutPrdct());
+    }
+
+    @And("User verifies the total price of item is {string}")
+    public void verifyTotalPriceMatched(String totalPrice) throws InterruptedException {
+        Assert.assertEquals(totalPrice, overviewPage.verifyTotalPrc());
+        Thread.sleep(2000);
     }
 }
