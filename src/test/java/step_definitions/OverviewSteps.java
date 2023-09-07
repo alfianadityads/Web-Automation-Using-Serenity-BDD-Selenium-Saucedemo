@@ -1,5 +1,6 @@
 package step_definitions;
 
+import org.example.pageObject.CheckoutPage;
 import org.example.pageObject.OverviewPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -28,6 +29,11 @@ public class OverviewSteps {
     public void verifyTotalPriceMatched(String totalPrice) throws InterruptedException {
         Assert.assertEquals(totalPrice, overviewPage.verifyTotalPrc());
         Thread.sleep(2000);
+    }
+
+    @And("User clicks finish button")
+    public void clickFnsh() {
+        overviewPage.clickFinish();
     }
 
     @Then("User already on Checkout: Complete! page")
