@@ -30,6 +30,10 @@ public class OverviewPage {
     @FindBy(xpath = "//button[@id='finish']")
     private WebElement buttonFinish;
 
+    // select order complete verification
+    @FindBy(xpath = "//span[text()='Checkout: Complete!']")
+    private WebElement verifyFinishOrder;
+
     // ============================================================
 
     // verify user already on checkout overview page
@@ -50,5 +54,10 @@ public class OverviewPage {
     // click finish button
     public void clickFinish() {
         buttonFinish.click();
+    }
+
+    // verify user finish oder
+    public boolean verifyFinishOrdr() {
+        return verifyFinishOrder.isDisplayed();
     }
 }
