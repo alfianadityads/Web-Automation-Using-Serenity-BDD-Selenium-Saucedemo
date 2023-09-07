@@ -26,6 +26,10 @@ public class OverviewPage {
     @FindBy(xpath = "//div[@class='summary_info_label summary_total_label']")
     private WebElement verifyTotalPrice;
 
+    // select button finish order
+    @FindBy(xpath = "//button[@id='finish']")
+    private WebElement buttonFinish;
+
     // ============================================================
 
     // verify user already on checkout overview page
@@ -41,5 +45,10 @@ public class OverviewPage {
     // user verify total product price
     public String verifyTotalPrc() {
         return verifyTotalPrice.getText().replace("Total: ", "");
+    }
+
+    // click finish button
+    public void clickFinish() {
+        buttonFinish.click();
     }
 }
