@@ -39,7 +39,7 @@ public class OverviewPage {
     }
 
     // user verify total product price
-    public String verifyTotalPrdct() {
-        return verifyTotalPrdct();
+    public String verifyTotalPrc() {
+        return verifyTotalPrice.getText().replace("Total: ", "");
     }
 }
