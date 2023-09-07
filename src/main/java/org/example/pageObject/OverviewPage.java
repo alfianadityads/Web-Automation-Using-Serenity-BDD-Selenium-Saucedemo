@@ -18,10 +18,19 @@ public class OverviewPage {
     @FindBy(xpath = "//span[text()='Checkout: Overview']")
     private WebElement displayOverviewPage;
 
+    // select product for verify what product wanna checkout
+    @FindBy(xpath = "//div[@class='inventory_item_name']")
+    private WebElement verifyCheckoutProduct;
+
     // ============================================================
 
     // verify user already on checkout overview page
     public boolean verifyOverviewPage() {
         return displayOverviewPage.isDisplayed();
+    }
+
+    // user verifies which product to checkout
+    public boolean verifyCheckoutPrdct() {
+        return verifyCheckoutProduct.isDisplayed();
     }
 }
