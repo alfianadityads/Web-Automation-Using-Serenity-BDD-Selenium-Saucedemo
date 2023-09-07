@@ -1,6 +1,5 @@
 package step_definitions;
 
-import org.example.pageObject.CheckoutPage;
 import org.example.pageObject.OverviewPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
