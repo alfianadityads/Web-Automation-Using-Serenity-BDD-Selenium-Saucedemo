@@ -15,10 +15,8 @@ Feature: Checkout
     Then User already on checkout page
     And User inputs "Alfian" as firstName, inputs "Saputra" as lastName, and inputs "0085XX" as postalCode
     And User clicks continue button
-#    Then User already on checkout overview page
-#    When User verifies that Sauce Labs Onesie as a product in the checkout list
-#    And User verifies the total price of item is "$8.63"
-#    And User clicks finish button
-#    Then User already on Checkout: Complete! page
-
-
+    Then User already on checkout overview page
+    When User verifies that Sauce Labs Onesie as a product in the checkout list
+    And User verifies the total price of item is "$8.63"
+    And User clicks finish button
+    Then User already on Checkout: Complete! page

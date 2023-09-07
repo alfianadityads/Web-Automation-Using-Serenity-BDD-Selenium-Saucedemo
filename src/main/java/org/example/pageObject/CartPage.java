@@ -22,11 +22,11 @@ public class CartPage {
     @FindBy(xpath = "//button[@id='remove-test.allthethings()-t-shirt-(red)']")
     private WebElement buttonRemoveProduct;
 
-    // ================================================================
-
     // Select button to checkout
     @FindBy(xpath = "//button[@id='checkout']")
     private WebElement buttonCheckout;
+
+    // ================================================================
 
     // Verify user already in cart page
     public boolean verifyCartPage() {
