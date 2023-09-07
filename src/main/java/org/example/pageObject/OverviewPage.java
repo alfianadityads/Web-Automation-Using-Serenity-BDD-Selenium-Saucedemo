@@ -19,7 +19,7 @@ public class OverviewPage {
     private WebElement displayOverviewPage;
 
     // select product for verify what product wanna checkout
-    @FindBy(xpath = "//div[@class='inventory_item_name']")
+    @FindBy(xpath = "//div[text()='Sauce Labs Onesie']")
     private WebElement verifyCheckoutProduct;
 
     // ============================================================
