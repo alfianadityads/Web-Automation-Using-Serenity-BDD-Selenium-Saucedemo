@@ -22,6 +22,10 @@ public class OverviewPage {
     @FindBy(xpath = "//div[text()='Sauce Labs Onesie']")
     private WebElement verifyCheckoutProduct;
 
+    // select element user verify total product price
+    @FindBy(xpath = "//div[@class='summary_info_label summary_total_label']")
+    private WebElement verifyTotalPrice;
+
     // ============================================================
 
     // verify user already on checkout overview page
@@ -32,5 +36,10 @@ public class OverviewPage {
     // user verifies which product to checkout
     public boolean verifyCheckoutPrdct() {
         return verifyCheckoutProduct.isDisplayed();
+    }
+
+    // user verify total product price
+    public String verifyTotalPrdct() {
+        return verifyTotalPrdct();
     }
 }
