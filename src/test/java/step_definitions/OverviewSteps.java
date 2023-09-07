@@ -29,4 +29,10 @@ public class OverviewSteps {
         Assert.assertEquals(totalPrice, overviewPage.verifyTotalPrc());
         Thread.sleep(2000);
     }
+
+    @Then("User already on Checkout: Complete! page")
+    public void verifyFinishOrder() throws InterruptedException {
+        Assert.assertTrue(overviewPage.verifyFinishOrdr());
+        Thread.sleep(2000);
+    }
 }
