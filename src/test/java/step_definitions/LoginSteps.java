@@ -18,10 +18,9 @@ public class LoginSteps {
     }
 
     @When("User inputs {string} as userName and inputs {string} as password, and clicks login button")
-    public void inputCredential(String usrName, String pswd) throws InterruptedException {
+    public void inputCredential(String usrName, String pswd) {
         loginPage.setUserName(usrName);
         loginPage.setPassword(pswd);
         loginPage.clickButtonLogin();
-        Thread.sleep(3000);
     }
 }

@@ -19,17 +19,14 @@ public class CheckoutSteps {
     }
 
     @And("User inputs {string} as firstName, inputs {string} as lastName, and inputs {string} as postalCode")
-    public void inputBuyerInformation(String firstName, String lastName, String postalCode)
-            throws InterruptedException {
+    public void inputBuyerInformation(String firstName, String lastName, String postalCode) {
         checkoutPage.fillFirstName(firstName);
         checkoutPage.fillLastName(lastName);
         checkoutPage.fillPostalCode(postalCode);
-        Thread.sleep(3000);
     }
 
     @And("User clicks continue button")
-    public void clickContinueButton() throws InterruptedException {
+    public void clickContinueButton() {
         checkoutPage.clickContinueButton();
-        Thread.sleep(3000);
     }
 }

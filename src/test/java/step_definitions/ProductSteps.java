@@ -30,9 +30,8 @@ public class ProductSteps {
     }
 
     @Then("User clicks cart button")
-    public void clickCart() throws InterruptedException {
+    public void clickCart() {
         productPage.clickCart();
-        Thread.sleep(3000);
     }
 
 }

@@ -25,9 +25,8 @@ public class OverviewSteps {
     }
 
     @And("User verifies the total price of item is {string}")
-    public void verifyTotalPriceMatched(String totalPrice) throws InterruptedException {
+    public void verifyTotalPriceMatched(String totalPrice) {
         Assert.assertEquals(totalPrice, overviewPage.verifyTotalPrc());
-        Thread.sleep(2000);
     }
 
     @And("User clicks finish button")
@@ -36,8 +35,7 @@ public class OverviewSteps {
     }
 
     @Then("User already on Checkout: Complete! page")
-    public void verifyFinishOrder() throws InterruptedException {
+    public void verifyFinishOrder() {
         Assert.assertTrue(overviewPage.verifyFinishOrdr());
-        Thread.sleep(2000);
     }
 }
